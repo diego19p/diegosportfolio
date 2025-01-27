@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diego's Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="icond.png" type="image/png">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="landing-section" id="landing-section">
-    <img src="image.jpg" alt="Imagen de fondo" class="landing-image">
+    <img src="image.jpg" alt="Fondo de la sección de inicio" class="landing-image" loading="lazy">
     <h1>¡Hello! I'm Diego Paredes.</h1>
     <a href="#about" class="scroll-down">
       <span class="arrow"></span>
@@ -39,6 +41,8 @@
         <div id="hard-skills">
           <h2>Hard skills</h2>
           <ul class="bullet-list">
+            <li>Web development</li>
+            <li>SQL proficiency</li>
             <li>PLC and Robot programming</li>
             <li>Electrical and mechanical design</li>
             <li>Data Visualization</li>
@@ -47,38 +51,33 @@
         </div>
       </div>
       
-      
-      
       <div class="section">
         <h2>Proyects</h2>
         
         <div class="project">
           <h3>Automated Greenhouse</h3>
           <p>Our project entailed the development of an automated greenhouse model using Raspberry Pi, Python, and sensors. We engineered a control system to maintain optimal humidity and temperature conditions. Moreover, we crafted a user-friendly graphical interface providing real-time data feedback and enabling seamless actuator control.</p>
-          <img src="invernadero.jpg" class="project-image">
+          <img src="invernadero.jpg" alt="Proyecto de invernadero automatizado" class="project-image" loading="lazy">
         </div>
 
-        <div class="project"></div>
+        <div class="project">
           <h3>Bar - Matic</h3>
-          <p>The Bar-Matic is an innovative solution designed to instantly prepare personalized cocktails and beverages. With precision technology, it integrates flow meters to ensure the exact measurement of each ingredient, while offering three convenient control modes: a WiFi-connected mobile app, an integrated touchscreen, and voice control via Alexa. From a simple lemonade to a Cuba Libre, enjoy your favorite drinks effortlessly. Perfect for events, bars, and home use, Bar-Matic is designed with the user’s convenience and practicality in mind, making every drink preparation seamless and enjoyable.
-          </p>
-          <img src="barmatic.jpg" class="project-image">
+          <p>The Bar-Matic is an innovative solution designed to instantly prepare personalized cocktails and beverages. With precision technology, it integrates flow meters to ensure the exact measurement of each ingredient, while offering three convenient control modes: a WiFi-connected mobile app, an integrated touchscreen, and voice control via Alexa. From a simple lemonade to a Cuba Libre, enjoy your favorite drinks effortlessly. Perfect for events, bars, and home use, Bar-Matic is designed with the user’s convenience and practicality in mind, making every drink preparation seamless and enjoyable.</p>
+          <img src="barmatic.jpg" alt="Proyecto Bar-Matic" class="project-image" loading="lazy">
         </div>
       </div>
       
-      
-
       <div class="section">
         <h2>Contact</h2>
-        <p>Email: diego19paredes21@gmail.com</p>
-        <p>Phone: +52 669 913 6264</p>
+        <p>Email: <a href="mailto:diego19paredes21@gmail.com">diego19paredes21@gmail.com</a></p>
+        <p>Phone: <a href="tel:+526699136264">+52 669 913 6264</a></p>
       </div>
       
       <div id="socialLinksContainer" class="social-links social-links-hidden">
-        <a href="https://github.com/diego19p"><img src="github.png" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/jos%C3%A9-diego-%C3%A1lvarez-paredes-554392277/"><img src="linkedin.png" alt="Linkedin"></a>
-        <a href="https://www.instagram.com/diego19paredes/"><img src="instagram.png" alt="Instagram"></a>
-        <a href="https://www.facebook.com/profile.php?id=100007542189883"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://github.com/diego19p" aria-label="GitHub"><img src="github.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/jos%C3%A9-diego-%C3%A1lvarez-paredes-554392277/" aria-label="LinkedIn"><img src="linkedin.png" alt="Linkedin"></a>
+        <a href="https://www.instagram.com/diego19paredes/" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/profile.php?id=100007542189883" aria-label="Facebook"><img src="facebook.png" alt="Facebook"></a>
       </div>
     </div>
   </div>
