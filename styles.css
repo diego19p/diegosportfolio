@@ -1,11 +1,19 @@
-/* Reset de márgenes y relleno en el cuerpo de la página */
+:root {
+  --primary-color: #130650;
+  --secondary-color: #003366;
+  --text-color: #000;
+  --background-color: #fff;
+  --font-family: Arial, sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
-/* Estilos para la sección de aterrizaje */
 .landing-section {
   position: relative;
   height: 100vh;
@@ -29,12 +37,11 @@ body {
   z-index: -1;
 }
 
-/* Estilos para el título en la sección de aterrizaje */
 .landing-section h1 {
   font-size: 2.5rem;
+  margin: 0;
 }
 
-/* Estilos para el botón de desplazamiento en la sección de aterrizaje */
 .scroll-down {
   position: absolute;
   bottom: 20px;
@@ -69,7 +76,6 @@ body {
   transform: rotate(45deg);
 }
 
-/* Estilos para el texto del botón de desplazamiento */
 .scroll-down .text {
   font-size: 1rem;
 }
@@ -78,7 +84,6 @@ body {
   opacity: 0.8;
 }
 
-/* Estilos generales para el contenido */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -88,17 +93,17 @@ body {
 .section {
   margin-bottom: 30px;
   padding-bottom: 10px;
-  border-bottom: 3px solid #130650;
+  border-bottom: 3px solid var(--primary-color);
 }
 
 h2 {
-  font-size: 1.5rem; /* Tamaño de fuente responsive */
-  color: #130650;
+  font-size: 1.5rem;
+  color: var(--primary-color);
 }
 
 p {
-  font-size: 1rem; /* Tamaño de fuente responsive */
-  color: #000;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 ul {
@@ -107,80 +112,103 @@ ul {
 }
 
 li {
-  font-size: 1rem; /* Tamaño de fuente responsive */
-  color: #000;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .project {
-  background-color: #fff;
+  background-color: var(--background-color);
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project h3 {
-  font-size: 1rem; /* Tamaño de fuente responsive */
-  color: #000;
+  font-size: 1.25rem;
+  color: var(--primary-color);
 }
 
 .project img {
   max-width: 100%;
+  height: auto;
+  border-radius: 5px;
   margin-bottom: 10px;
 }
 
-/* Estilos para los íconos de redes sociales */
 .social-links {
   display: flex;
   justify-content: center;
-  align-items: center; 
-  background-color: #003366;
+  align-items: center;
+  background-color: var(--secondary-color);
   width: 100%;
   height: 40px;
   position: fixed;
-  bottom: 0; /* Cambia esto a -40px para ocultar la barra al principio */
+  bottom: 0;
   left: 0;
-  width: 100%;
   z-index: 999;
   padding: 20px;
-  transition: bottom 0.3s ease; /* Agrega una transición suave */
+  transition: bottom 0.3s ease;
 }
-
 
 .social-links img {
-  background-color: transparent;
-  background-position: center;
-  background-size: contain;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin-right: 15px;
-  align-self: center;
+  transition: transform 0.3s ease;
 }
 
-.social-links a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: #fff;
+.social-links img:hover {
+  transform: scale(1.1);
 }
 
 .social-links-hidden {
   display: none;
 }
 
-.social-links img:hover {
-  filter: brightness(0) invert(1);
+@media (max-width: 768px) {
+  .landing-section h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p, li {
+    font-size: 0.9rem;
+  }
+
+  #skills {
+    flex-direction: column;
+  }
+
+  #soft-skills,
+  #hard-skills {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .social-links img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
-#skills {
-  display: flex;
-  justify-content: space-between; /* Distribuir elementos a los extremos */
-}
+@media (max-width: 480px) {
+  .landing-section h1 {
+    font-size: 1.5rem;
+  }
 
-#soft-skills,
-#hard-skills {
-  width: 45%; /* Ajustar el ancho de cada contenedor según sea necesario */
-}
-.bullet-list {
-  list-style-type: disc; /* Cambiar el tipo de viñeta aquí (por ejemplo: circle, square) */
-  margin-left: 20px; /* Ajustar el espacio entre la viñeta y el texto */
-}
+  h2 {
+    font-size: 1rem;
+  }
 
+  p, li {
+    font-size: 0.8rem;
+  }
+}
