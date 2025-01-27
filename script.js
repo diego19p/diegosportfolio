@@ -17,4 +17,4 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("error", function (event) {
       console.error("Error:", event.message);
     });
-  });
+});
