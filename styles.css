@@ -6,12 +6,36 @@
   --font-family: Arial, sans-serif;
 }
 
+.dark-mode {
+  --primary-color: #6a5acd;
+  --secondary-color: #483d8b;
+  --text-color: #fff;
+  --background-color: #121212;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
   color: var(--text-color);
   background-color: var(--background-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s, color 0.3s;
 }
 
 .landing-section {
